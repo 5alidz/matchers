@@ -4,7 +4,7 @@
  * @param {T} valueToMatch
  * @returns {function(...[T|'_', () => any]): any}
  */
-export default function matches(valueToMatch) {
+module.exports = function matches(valueToMatch) {
   return function(...allPossibleCases) {
     // get the default case.
     const defaultCase = allPossibleCases[allPossibleCases.length - 1];
@@ -34,4 +34,4 @@ export default function matches(valueToMatch) {
       return defaultCaseValue();
     }
   };
-}
+};

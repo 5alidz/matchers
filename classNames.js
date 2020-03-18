@@ -1,4 +1,4 @@
-export default function classes(...classesToMerge) {
+module.exports = function classes(...classesToMerge) {
   const passedClasses = [];
   for (let i = 0; i < classesToMerge.length; i++) {
     const chunk = classesToMerge[i];
@@ -17,4 +17,4 @@ export default function classes(...classesToMerge) {
     }
   }
   return passedClasses.join(' ');
-}
+};
