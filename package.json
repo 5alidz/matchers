@@ -1,0 +1,26 @@
+{
+  "name": "@5alid/matchers",
+  "version": "0.1.0",
+  "description": "vanilla js matching utils",
+  "main": "index.js",
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/5alidz/matchers.git"
+  },
+  "keywords": [
+    "pattern",
+    "matching"
+  ],
+  "author": "5alid",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/5alidz/matchers/issues"
+  },
+  "homepage": "https://github.com/5alidz/matchers#readme"
+}
