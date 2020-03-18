@@ -1,10 +1,10 @@
 /**
  * @function
- * @template T
+ * @template {(string|number|boolean)} T
  * @param {T} valueToMatch
  * @returns {function(...[T|'_', () => any]): any}
  */
-module.exports = function matches(valueToMatch) {
+function matches(valueToMatch) {
   return function(...allPossibleCases) {
     // get the default case.
     const defaultCase = allPossibleCases[allPossibleCases.length - 1];
@@ -34,4 +34,6 @@ module.exports = function matches(valueToMatch) {
       return defaultCaseValue();
     }
   };
-};
+}
+
+module.exports = matches;
