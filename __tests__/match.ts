@@ -1,4 +1,4 @@
-const match = require('../match.js');
+import match from '../match';
 
 test('throws error if no default case provided', () => {
   const throwing = () => {
@@ -9,7 +9,6 @@ test('throws error if no default case provided', () => {
 });
 
 test('matches numbers', () => {
-  /**@type {number[]} */
   const nums = [0, 1, 2, NaN];
 
   const result = match(nums[1])(
@@ -23,7 +22,6 @@ test('matches numbers', () => {
 });
 
 test('matches strings', () => {
-  /**@type {('IDLE'|'LOADING'|'ERROR'|'SUCCESS')[]} */
   const status = ['IDLE', 'LOADING', 'ERROR', 'SUCCESS'];
 
   const result = match(status[0])(
@@ -38,7 +36,6 @@ test('matches strings', () => {
 });
 
 test('matches booleans', () => {
-  /**@type {boolean[]} */
   const status = [true, false];
 
   const result = match(status[0])([true, () => 'true'], [false, () => 'false'], ['_', () => 'not a boolean']);

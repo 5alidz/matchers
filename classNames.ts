@@ -1,4 +1,6 @@
-function classes(...classesToMerge) {
+export type Pattern = null | undefined | string | [boolean, string, string?];
+
+export default function classes(...classesToMerge: Pattern[]) {
   const passedClasses = [];
   for (let i = 0; i < classesToMerge.length; i++) {
     const chunk = classesToMerge[i];
@@ -18,5 +20,3 @@ function classes(...classesToMerge) {
   }
   return passedClasses.join(' ');
 }
-
-module.exports = classes;
