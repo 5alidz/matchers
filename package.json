@@ -1,6 +1,6 @@
 {
   "name": "@5alid/matchers",
-  "version": "0.1.5",
+  "version": "0.1.6",
   "description": "pattern matching utils",
   "types": "dist/index.d.ts",
   "publishConfig": {
