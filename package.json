@@ -7,8 +7,7 @@
     "access": "public"
   },
   "scripts": {
-    "prepublish": "tsc",
-    "build": "tsc",
+    "prepublish": "npm version patch && git push -u origin master && tsc",
     "test": "jest",
     "test:watch": "jest --watchAll"
   },
